@@ -1,0 +1,28 @@
+## -----------------------------------------------
+## Basic Configuration
+## -----------------------------------------------
+
+title = "Dose de Telemetria"
+theme = "hugo-story"
+
+## -----------------------------------------------
+## Hugo Built-in Features
+## -----------------------------------------------
+
+disableKinds = ["taxonomy", "taxonomyTerm", "section"]
+googleAnalytics = "G-EGMP995EPV"
+
+
+## -----------------------------------------------
+## Site Parameters
+## -----------------------------------------------
+
+[Params]
+  description = "Uma dose de telemetria por dia faz bem para sua carreira"
+  logo = "images/banner.jpg"
+  favicon = true
+
+[Params.social]
+  twitter = "https://twitter.com/DoseTelemetria"
+  instagram = "https://www.instagram.com/dosetelemetria/"
+  linkedin = "https://www.linkedin.com/company/dosetelemetria"

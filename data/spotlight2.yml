@@ -1,0 +1,6 @@
+####################### Spotlight #########################
+style: "style1 orient-left content-align-left image-position-center onscroll-image-fade-in"
+title : "Meu caminho até aqui"
+content: |
+  Tenho um carinho especial por tecnologias de código aberto, sendo este meu foco de trabalho desde 2011. Na área de telemetria, atuo desde 2016, começando com o Hawkular APM, passando por <a href="https://www.jaegertracing.io/">Jaeger</a> e <a href="https://opentracing.io/">OpenTracing</a>. Hoje, estou focado em OpenTelemetry, fazendo parte do comitê de governança do projeto e sendo um mantenedor de módulos no OpenTelemetry Collector. Estou também entre os <a href="https://opentelemetry.devstats.cncf.io/d/9/developer-activity-counts-by-repository-group-table?orgId=1&var-period_name=Last%20year&var-metric=contributions&var-repogroup_name=All&var-country_name=All">maiores contribuidores</a> do projetos.
+image: "images/spotlight-caminho.jpg"
