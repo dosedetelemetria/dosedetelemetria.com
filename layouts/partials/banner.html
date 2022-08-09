@@ -1,0 +1,16 @@
+<!-- Banner -->
+<section class="banner {{ .style }}">
+    <div class="content">
+        {{ with .title }}<h1>{{ . }}</h1>{{ end }}
+        {{ with .subtitle }}<p class="major">{{ . | safeHTML }}</p>{{ end }}
+        {{ with .content }}<p>{{ . | safeHTML }}</p>{{ end }}
+        {{ with .button }}<ul class="actions stacked">
+            <li><a href="{{ .link }}" class="button primary large wide smooth-scroll-middle">{{ .label }}</a></li>
+        </ul>{{ end }}
+    </div>
+    <div class="image">
+        {{ $image := resources.Get .image }}
+        {{ $image := $image.Resize "x1920 webp" }}
+        <img src="{{ $image.RelPermalink }}" />   
+    </div>
+</section>
