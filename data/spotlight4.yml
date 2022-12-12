@@ -3,7 +3,7 @@ style: "style1 orient-left content-align-left image-position-center onscroll-ima
 id: "first"
 title : "Doses diárias"
 content: |
-  Além do encontro semanal, todos os dias compartilho pelas redes sociais uma pequena dose de conhecimento relacionado aos temas acima. Portanto, siga o Dose de Telemetria na sua rede social favorita: <a href="https://twitter.com/DoseTelemetria">Twitter</a>, <a href="https://www.instagram.com/dosetelemetria/">Instagram</a>, <a href="https://www.linkedin.com/company/dosetelemetria">LinkedIn</a>.
+  Além do encontro semanal, todos os dias compartilho pelas redes sociais uma pequena dose de conhecimento relacionado aos temas acima. Portanto, siga o Dose de Telemetria na sua rede social favorita: <a href="https://twitter.com/DoseTelemetria">Twitter</a>, <a href="https://www.instagram.com/dosetelemetria/">Instagram</a>, <a href="https://www.linkedin.com/company/dosetelemetria">LinkedIn</a>. Assine também o <a href="https://www.youtube.com/@DoseDeTelemetria">canal @DoseDeTelemetria no YouTube</a>, para que não perca nenhuma dose ao vivo.
   <p>
   Em comum, o conceito de que todas as doses de conhecimento compartilhadas precisam de no máximo 30 minutos da sua atenção. Consistência é o nome do jogo.
-image: "images/spotlight/dose.jpg"
+image: "images/spotlight/dose.webp"

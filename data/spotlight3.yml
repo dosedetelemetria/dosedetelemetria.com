@@ -3,5 +3,5 @@ style: "style1 orient-right content-align-left image-position-center onscroll-im
 id: "first"
 title : "Nosso encontro"
 content: |
-  Toda quinta-feira às 13:13, temos um encontro marcado para conversar ao vivo sobre um tema relacionado a telemetria, observabilidade, OpenTelemetry, ou outro assunto relacionado.
+  Toda quinta-feira às 13:13, temos um encontro marcado para conversar ao vivo no <a href="https://www.youtube.com/@DoseDeTelemetria">canal @DoseDeTelemetria no YouTube</a> sobre um tema relacionado a telemetria, observabilidade, OpenTelemetry, ou outro assunto relacionado.
 image: "images/spotlight/horario.png"

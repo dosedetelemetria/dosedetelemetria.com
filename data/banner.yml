@@ -8,5 +8,5 @@ content : |
 button:
   label : "Leia mais..."
   link : "#first"
-image : "images/banner.jpg"
+image : "images/banner.webp"
 
