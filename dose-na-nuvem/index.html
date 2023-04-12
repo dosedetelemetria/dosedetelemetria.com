@@ -4397,7 +4397,7 @@
         nonce="">!function () { "use strict"; function n(n, t) { let e = (null == t ? void 0 : t.runOnLoad) ? void 0 : document.documentElement.clientWidth, o = (null == t ? void 0 : t.runOnLoad) ? void 0 : window.innerHeight; const r = () => { const r = { runOnLoad: !1, runOnWidthChange: !0, runOnHeightChange: !1, ...t }, i = document.documentElement.clientWidth, d = window.innerHeight, c = o !== d; (e !== i && r.runOnWidthChange || c && r.runOnHeightChange) && n(), e = i, o = d }, i = function (n, t) { let e; return (...o) => { clearTimeout(e), e = setTimeout((() => { n(...o) }), t) } }(r, 100); window.addEventListener("resize", i), (null == t ? void 0 : t.runOnLoad) && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", r) : r()) } function t(n, t, e = .001) { return Math.abs(n - t) < e } function e(n, t) { return window.getComputedStyle(n).getPropertyValue(t) } function o(n, t, e) { n.style.setProperty(t, e) } function r(n, t) { const o = document.createElement("div"); o.style.setProperty(n, t), document.body.append(o); const r = e(o, n); return o.remove(), r } function i() { const i = function () { const n = parseFloat(r("font-size", "0.1px")); return n > 1 ? n : 0 }(), d = function (n) { const t = 2 * Math.max(n, 1); return t / parseFloat(r("font-size", `${t}px`)) }(i); if (function (t) { if (0 === t) return; o(document.documentElement, "--minfs", `${t}px`), n((() => { const n = 100 * t, { clientWidth: e } = document.documentElement; o(document.documentElement, "--rzf", n > e ? (e / n).toPrecision(4) : null) }), { runOnLoad: !0 }) }(i * Math.max(1, d)), t(d, 1)) return; const c = t(parseFloat(e(document.documentElement, "font-size")), parseFloat(r("grid-template-columns", "1rem"))); o(document.documentElement, c ? "--rfso" : "--bfso", d.toPrecision(4)) } function d() { document.querySelectorAll("img, image, video, svg").forEach((n => n.addEventListener("contextmenu", (n => n.preventDefault())))) } var c; const u = "undefined" != typeof window ? null === (c = window.navigator) || void 0 === c ? void 0 : c.userAgent : void 0; const a = !(!u || (m = u, !m.match(/AppleWebKit\//) || m.match(/Chrome\//) || m.match(/Chromium\//))); var m; function l() { document.documentElement.style.setProperty("--ffsd", "0.5px") } function s() { const n = window.innerWidth - document.documentElement.clientWidth; var t, e, o; t = document.documentElement, e = "--sbw", o = n >= 0 ? `${n}px` : null, t.style.setProperty(e, o) } function f(n) { const t = Array.from(n.children); t.forEach(((n, e) => { if (n.hasAttribute("data-foreign-object-container")) n.style.transformOrigin = "", n.style.transform = ""; else { const o = document.createElement("div"); o.setAttribute("data-foreign-object-container", ""), o.style.willChange = "transform", n.insertAdjacentElement("beforebegin", o), n.remove(), o.append(n), t[e] = o } })); const e = n.getScreenCTM(); if (!e) return; const { a: o, b: r, c: i, d: d } = e; t.forEach((n => { if (!n.hasAttribute("data-foreign-object-container")) return; const { style: t } = n; t.transformOrigin = "0px 0px", t.transform = `matrix(${o}, ${r}, ${i}, ${d}, 0, 0)` })) } let h; function g() { h || (h = Array.from(document.querySelectorAll("foreignObject")).filter((n => 0 === n.getBoundingClientRect().width))), Array.from(h).forEach(f) } [function () { a && ("loading" === document.readyState ? window.addEventListener("DOMContentLoaded", l) : l()) }, function () { "loading" === document.readyState ? window.addEventListener("DOMContentLoaded", i) : i() }, function () { n(s, { runOnLoad: !0 }) }, function () { a && n(g, { runOnLoad: !0 }) }, function () { "loading" === document.readyState ? window.addEventListener("DOMContentLoaded", d) : d() }].forEach((n => n())) }();</script>
 </head>
 
-<body data-new-gr-c-s-check-loaded="8.905.0" data-gr-ext-installed="">
+<body>
     <div id="root">
         <section id="dose-na-nuvem"
             style="z-index:0;overflow:hidden;grid-template-columns:auto 100rem auto;display:grid;position:relative;align-items:center;">
@@ -4516,7 +4516,6 @@
                             </p>
                             <p id="GuM9lOvzubUXkaXH"
                                 style="text-transform:none;text-shadow:0em 0.0375em 0.159375em rgba(0, 0, 0, 0.325000);color:#000000;white-space:pre;letter-spacing:0em;font-family:YAD1bzmZQho-0;line-height:1.2em;">
-                                <br>
                             </p>
                             <p id="zbEZF7gZHohchdgs"
                                 style="text-transform:none;text-shadow:0em 0.0375em 0.159375em rgba(0, 0, 0, 0.325000);color:#000000;letter-spacing:0em;font-family:YAD1bzmZQho-0;line-height:1.2em;">
@@ -4525,7 +4524,6 @@
                             </p>
                             <p id="M4UuezekYwnEEn8c"
                                 style="text-transform:none;text-shadow:0em 0.0375em 0.159375em rgba(0, 0, 0, 0.325000);color:#000000;white-space:pre;letter-spacing:0em;font-family:YAD1bzmZQho-0;line-height:1.2em;">
-                                <br>
                             </p>
                             <p id="XydMVVU1HRekOBWU"
                                 style="text-transform:none;text-shadow:0em 0.0375em 0.159375em rgba(0, 0, 0, 0.325000);color:#000000;letter-spacing:0em;font-family:YAD1bzmZQho-0;line-height:1.2em;">
@@ -4583,7 +4581,6 @@
                             </p>
                             <p id="s1O4Cwz41mjJbUGy"
                                 style="text-shadow:0em 0.0375em 0.159375em rgba(0, 0, 0, 0.325000);color:#000000;white-space:pre;font-family:YAD1bzmZQho-0;line-height:1.2em;">
-                                <br>
                             </p>
                             <p id="sdhaHhFlg214pkNJ"
                                 style="margin-left:0em;text-transform:none;text-shadow:0em 0.0375em 0.159375em rgba(0, 0, 0, 0.325000);color:#000000;letter-spacing:0em;font-family:YAD1bzmZQho-0;line-height:1.2em;direction:ltr;text-align:left;">
@@ -4737,7 +4734,6 @@
                             </p>
                             <p id="ahVHkKL5HnCQAzfr"
                                 style="text-shadow:0em 0.0375em 0.159375em rgba(0, 0, 0, 0.325000);color:#000000;white-space:pre;font-family:YAD1bzmZQho-0;line-height:1.2em;">
-                                <br>
                             </p>
                             <p id="SPel8zg06A5UVF5q"
                                 style="margin-left:0em;text-transform:none;text-shadow:0em 0.0375em 0.159375em rgba(0, 0, 0, 0.325000);color:#000000;letter-spacing:0em;font-family:YAD1bzmZQho-0;line-height:1.2em;direction:ltr;text-align:left;">
@@ -5165,7 +5161,7 @@
                             style="flex-direction:column;display:flex;width:100%;justify-content:flex-end;opacity:1.0;height:100%;">
                             <p id="fSalCHlpVTKwkKIq"
                                 style="margin-left:0em;text-transform:none;text-shadow:0em 0.0375em 0.159375em rgba(0, 0, 0, 0.325000);color:#000000;letter-spacing:0em;font-family:YALBszUSD-E-0;line-height:0.9em;direction:ltr;">
-                                <span id="mYNB9eoOFPhdaXKB" style="color:#000000;">Em breve.</span><br>
+                                <span id="mYNB9eoOFPhdaXKB" style="color:#000000;">Online. Gratuito.</span><br>
                             </p>
                         </div>
                     </div>
@@ -5254,6 +5250,5 @@
         <script src="assets/73ad2651535b7ecadd366d5fa045dc32c1cdb8fc38f8243601b62b64f4123.js" async=""
             nonce=""></script>
     </div>
-</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration>
-
+</body>
 </html>
