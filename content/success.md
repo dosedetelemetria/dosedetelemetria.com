@@ -1,4 +1,0 @@
----
-title: "Obrigado"
-layout: success
----

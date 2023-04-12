@@ -1,7 +1,0 @@
-####################### Spotlight #########################
-style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
-id: "first"
-title : "Hello, world"
-content: |
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/gUEF-y1dslM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-image: "images/spotlight/hello.webp"

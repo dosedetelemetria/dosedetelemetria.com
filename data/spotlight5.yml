@@ -1,7 +1,0 @@
-####################### Spotlight #########################
-style: "style1 orient-right content-align-left image-position-center onscroll-image-fade-in"
-id: "first"
-title : "Próximos passos"
-content: |
-  E o projeto só está começando: minha cabeça está fervilhando de ideias, bolando jeitos de te ensinar tudo o que eu sei sobre OpenTelemetry.
-image: "images/spotlight/passos.webp"
