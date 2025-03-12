@@ -1,8 +1,10 @@
 
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import SectionHeading from "@/components/SectionHeading";
 import ProductCard from "@/components/ProductCard";
+import { productData } from "@/data/product-data";
 
 const Products = () => {
   return (
@@ -45,42 +47,20 @@ const Products = () => {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-            <ProductCard
-              id="especializacao"
-              title="Especialização em OTel"
-              description="Formação intensiva com mentorias ao vivo e projetos práticos"
-              features={[
-                { text: "Turmas com vagas limitadas" },
-                { text: "Mentorias ao vivo com especialistas" },
-                { text: "Projetos práticos e feedback personalizado" },
-                { text: "Certificado de conclusão" },
-                { text: "Acesso ao grupo privado de alunos" },
-                { text: "Material complementar exclusivo" }
-              ]}
-              price="R$ 1.997,00"
-              ctaText="Lista de espera"
-              ctaLink="/waiting-list"
-              available={false}
-            />
-            
-            <ProductCard
-              id="trilha"
-              title="Trilha OTel"
-              description="Curso completo para aprender no seu ritmo"
-              features={[
-                { text: "Acesso vitalício às aulas" },
-                { text: "Certificado de conclusão" },
-                { text: "Projetos práticos guiados" },
-                { text: "Suporte via comunidade" },
-                { text: "Atualizações do conteúdo" },
-                { text: "30 dias de garantia" }
-              ]}
-              price="R$ 697,00"
-              ctaText="Comprar agora"
-              ctaLink="/checkout"
-              available={true}
-              popular={true}
-            />
+            {productData.map((product) => (
+              <ProductCard
+                key={product.id}
+                id={product.id}
+                title={product.title}
+                description={product.description}
+                features={product.features}
+                price={product.price}
+                ctaText={product.available ? "Ver detalhes" : "Lista de espera"}
+                ctaLink={`/produtos/${product.slug}`}
+                available={true} // Always true since we're linking to product detail
+                popular={product.popular}
+              />
+            ))}
           </div>
         </div>
       </section>
