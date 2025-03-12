@@ -1,4 +1,3 @@
-
 export interface ProductFeature {
   text: string;
 }
@@ -191,7 +190,7 @@ export const productData: Product[] = [
         ]
       }
     ],
-    price: "R$ 697,00",
+    price: "€397",
     ctaText: "Comprar agora",
     ctaLink: "https://mn.dosedetelemetria.com/users/onboarding/choose_plan?plan_id=1764302&bundle_token=f055362f994c50af8e95a84c787cc1fb&utm_source=manual",
     available: true,

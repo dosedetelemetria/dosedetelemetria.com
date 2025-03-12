@@ -1,4 +1,3 @@
-
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -111,7 +110,7 @@ const Products = () => {
                 </tr>
                 <tr>
                   <td className="py-4 px-6 text-white">Preço</td>
-                  <td className="py-4 px-6 text-center font-semibold text-white">R$ 697,00</td>
+                  <td className="py-4 px-6 text-center font-semibold text-white">€397</td>
                   <td className="py-4 px-6 text-center font-semibold text-white">R$ 1.997,00</td>
                 </tr>
                 <tr className="bg-telemetria-dark/50">
