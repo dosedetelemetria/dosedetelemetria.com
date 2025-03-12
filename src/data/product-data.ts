@@ -1,3 +1,4 @@
+
 export interface ProductFeature {
   text: string;
 }
@@ -107,7 +108,7 @@ export const productData: Product[] = [
         ]
       }
     ],
-    price: "R$ 1.997,00",
+    price: "€997",
     ctaText: "Lista de espera",
     ctaLink: "/waiting-list",
     available: false

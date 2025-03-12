@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
 import { useEffect, useState } from "react";
 import { productData } from "@/data/product-data";
+import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 const ProductDetail = () => {
   const { slug } = useParams();
@@ -103,6 +104,17 @@ const ProductDetail = () => {
         </div>
       </section>
 
+      {/* Lead Capture Form (only for unavailable products) */}
+      {!product.available && (
+        <section className="section-padding bg-telemetria-darker">
+          <div className="container-custom">
+            <div className="max-w-lg mx-auto">
+              <LeadCaptureForm productId={product.id} productName={product.title} />
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Curriculum */}
       <section className="section-padding bg-telemetria-dark">
         <div className="container-custom">
@@ -160,13 +172,22 @@ const ProductDetail = () => {
                 </a>
               </Button>
             ) : (
-              <Button 
-                size="lg" 
-                className="bg-secondary/40 text-muted-foreground cursor-not-allowed"
-                disabled
-              >
-                {product.ctaText}
-              </Button>
+              <div className="space-y-4">
+                <Button 
+                  size="lg" 
+                  className="bg-secondary/40 text-muted-foreground cursor-not-allowed"
+                  disabled
+                >
+                  {product.ctaText}
+                </Button>
+                {!product.available && (
+                  <div className="pt-2">
+                    <p className="text-sm text-white/70">
+                      Este curso ainda não está disponível para compra. Inscreva-se na lista de espera acima para ser notificado quando abrirmos novas vagas.
+                    </p>
+                  </div>
+                )}
+              </div>
             )}
           </div>
         </div>
