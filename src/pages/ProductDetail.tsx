@@ -65,7 +65,7 @@ const ProductDetail = () => {
                     size="lg" 
                     className="bg-telemetria-yellow text-telemetria-dark hover:bg-telemetria-yellow/90 font-medium"
                   >
-                    <a href={product.ctaLink}>
+                    <a href={product.ctaLink} target="_blank" rel="noopener noreferrer">
                       {product.ctaText}
                     </a>
                   </Button>
@@ -155,7 +155,7 @@ const ProductDetail = () => {
                 size="lg" 
                 className="bg-telemetria-yellow text-telemetria-dark hover:bg-telemetria-yellow/90 font-medium"
               >
-                <a href={product.ctaLink}>
+                <a href={product.ctaLink} target="_blank" rel="noopener noreferrer">
                   {product.ctaText}
                 </a>
               </Button>

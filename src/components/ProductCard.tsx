@@ -31,6 +31,9 @@ const ProductCard = ({
   available,
   popular,
 }: ProductCardProps) => {
+  // Check if the link is external (starts with http or https)
+  const isExternalLink = ctaLink.startsWith('http');
+
   return (
     <div
       id={id}
@@ -79,7 +82,11 @@ const ProductCard = ({
             disabled={!available}
           >
             {available ? (
-              <Link to={ctaLink}>{ctaText}</Link>
+              isExternalLink ? (
+                <a href={ctaLink} target="_blank" rel="noopener noreferrer">{ctaText}</a>
+              ) : (
+                <Link to={ctaLink}>{ctaText}</Link>
+              )
             ) : (
               <span>{ctaText}</span>
             )}
