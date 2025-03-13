@@ -33,10 +33,10 @@ const Index = () => {
                 />
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-                Domine <span className="text-telemetria-yellow">OpenTelemetry</span> e transforme sua carreira
+                Torne-se especialista em <span className="text-telemetria-yellow">OpenTelemetry</span> na sua empresa.
               </h1>
               <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                Aprenda com especialistas como implementar observabilidade de forma eficiente em seus projetos e sistemas.
+              Aprenda todos os aspectos do OpenTelemetry, incluindo as principais convenções semânticas, a API, SDK, Collector, Operator, e muito mais.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -75,7 +75,6 @@ const Index = () => {
         <div className="container-custom">
           <SectionHeading
             title="Nossos Produtos"
-            subtitle="Cursos e especializações projetados para profissionais que desejam dominar OpenTelemetry"
             centered
           />
 
@@ -83,7 +82,7 @@ const Index = () => {
             <div className="glass-morphism rounded-xl p-8 flex flex-col h-full">
               <h3 className="text-2xl font-bold mb-4">Especialização em OTel</h3>
               <div className="inline-block ml-0 mb-4 px-3 py-1 bg-telemetria-yellow/10 border border-telemetria-yellow/20 text-xs rounded-full text-telemetria-yellow">
-                Próxima turma em breve
+                Em breve
               </div>
               <p className="text-white/80 mb-6">
                 Formação intensiva com turmas fechadas, mentorias ao vivo e projetos práticos. Desenvolva 
@@ -134,19 +133,18 @@ const Index = () => {
               <div className="animate-fade-in-right">
                 <SectionHeading
                   title="Nosso Canal no YouTube"
-                  subtitle="Conteúdo gratuito e dicas sobre OpenTelemetry, observabilidade e monitoramento"
+                  subtitle="Live toda sexta-feira, 10:00 de Brasília."
                 />
                 <div className="space-y-6">
                   <p className="text-white/80">
-                    Inscreva-se em nosso canal e receba notificações de novos vídeos sobre implementação 
-                    de OpenTelemetry, boas práticas e tutoriais passo a passo.
+                    Inscreva-se em nosso canal e receba notificações de novos vídeos, com conteúdo aprofundado, atualizado e em português sobre Monitoramento, Observabilidade, Telemetria e OpenTelemetry.
                   </p>
                   <div className="flex space-x-4">
                     <Button 
                       asChild
                       className="bg-[#FF0000] hover:bg-[#FF0000]/90 text-white"
                     >
-                      <a href="https://www.youtube.com/channel/" target="_blank" rel="noopener noreferrer">
+                      <a href="https://www.youtube.com/@DoseDeTelemetria" target="_blank" rel="noopener noreferrer">
                         <Youtube className="mr-2 h-5 w-5" /> Inscrever-se
                       </a>
                     </Button>
@@ -156,8 +154,8 @@ const Index = () => {
             </div>
             <div className="order-1 md:order-2">
               <VideoEmbed 
-                videoId="dQw4w9WgXcQ" 
-                title="Introdução ao OpenTelemetry" 
+                videoId="spdwPokz01w" 
+                title="" 
               />
             </div>
           </div>
@@ -209,7 +207,7 @@ const Index = () => {
             size="lg" 
             className="bg-[#0A66C2] hover:bg-[#0A66C2]/90 text-white"
           >
-            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
+            <a href="https://www.linkedin.com/company/dosetelemetria" target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
               <Linkedin className="mr-2 h-5 w-5" /> Seguir no LinkedIn
             </a>
           </Button>
