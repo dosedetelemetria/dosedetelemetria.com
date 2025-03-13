@@ -3,9 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import SectionHeading from "@/components/SectionHeading";
 import ProductCard from "@/components/ProductCard";
+import Testimonial from "@/components/Testimonial";
 import { productData } from "@/data/product-data";
+import { getRandomTestimonials } from "@/data/testimonial-data";
 
 const Products = () => {
+  // Obtém dois depoimentos aleatórios
+  const testimonials = getRandomTestimonials(2);
+  
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
@@ -58,6 +63,30 @@ const Products = () => {
                 ctaLink={`/produtos/${product.slug}`}
                 available={true} // Always true since we're linking to product detail
                 popular={product.popular}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Depoimentos */}
+      <section className="section-padding bg-telemetria-darker">
+        <div className="container-custom">
+          <SectionHeading
+            title="O que nossos alunos dizem"
+            subtitle="Veja como nossos cursos estão transformando carreiras"
+            centered
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {testimonials.map((testimonial) => (
+              <Testimonial
+                key={testimonial.id}
+                quote={testimonial.quote}
+                author={testimonial.author}
+                role={testimonial.role}
+                company={testimonial.company}
+                avatarUrl={testimonial.avatarUrl}
               />
             ))}
           </div>

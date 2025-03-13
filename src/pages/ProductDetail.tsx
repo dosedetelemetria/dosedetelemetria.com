@@ -1,10 +1,11 @@
-
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
+import Testimonial from "@/components/Testimonial";
 import { useEffect, useState } from "react";
 import { productData } from "@/data/product-data";
+import { getProductTestimonials } from "@/data/testimonial-data";
 import LeadCaptureForm from "@/components/LeadCaptureForm";
 
 const ProductDetail = () => {
@@ -29,6 +30,9 @@ const ProductDetail = () => {
       </div>
     );
   }
+
+  // Obtém três depoimentos específicos para este produto
+  const testimonials = getProductTestimonials(product.id, 3);
 
   return (
     <div className="flex flex-col w-full">
@@ -114,6 +118,30 @@ const ProductDetail = () => {
           </div>
         </section>
       )}
+
+      {/* Depoimentos */}
+      <section className="section-padding bg-background">
+        <div className="container-custom">
+          <SectionHeading
+            title="O que dizem nossos alunos"
+            subtitle="Experiências reais de quem já participou deste curso"
+            centered
+          />
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {testimonials.map((testimonial) => (
+              <Testimonial
+                key={testimonial.id}
+                quote={testimonial.quote}
+                author={testimonial.author}
+                role={testimonial.role}
+                company={testimonial.company}
+                avatarUrl={testimonial.avatarUrl}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Curriculum */}
       <section className="section-padding bg-telemetria-dark">
