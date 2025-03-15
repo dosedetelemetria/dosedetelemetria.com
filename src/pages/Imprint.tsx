@@ -17,22 +17,20 @@ const Imprint = () => {
           <div className="space-y-8">
             <section>
               <h3 className="text-lg font-medium mb-3">Informações do proprietário</h3>
-              <p className="text-white/80 mb-2">Dose de Telemetria Serviços Digitais LTDA</p>
-              <p className="text-white/80 mb-2">CNPJ: 12.345.678/0001-90</p>
+              <p className="text-white/80 mb-2">Dose de Telemetria GmbH</p>
             </section>
 
             <section>
               <h3 className="text-lg font-medium mb-3">Endereço</h3>
-              <p className="text-white/80 mb-2">Av. Paulista, 1000</p>
-              <p className="text-white/80 mb-2">Bela Vista</p>
-              <p className="text-white/80 mb-2">São Paulo - SP, 01310-100</p>
-              <p className="text-white/80 mb-2">Brasil</p>
+              <p className="text-white/80 mb-2">Hauptstr. 14</p>
+              <p className="text-white/80 mb-2">13158 Berlin</p>
+              <p className="text-white/80 mb-2">Alemanha</p>
             </section>
 
             <section>
               <h3 className="text-lg font-medium mb-3">Contato</h3>
               <p className="text-white/80 mb-2">E-mail: contato@dosedetelemetria.com</p>
-              <p className="text-white/80 mb-2">Telefone: +55 (11) 9876-5432</p>
+              <p className="text-white/80 mb-2">Telefone: +49 176 4655-4626</p>
             </section>
 
             <section>
@@ -43,8 +41,8 @@ const Imprint = () => {
 
             <section>
               <h3 className="text-lg font-medium mb-3">Registro da empresa</h3>
-              <p className="text-white/80 mb-2">Registrada na Junta Comercial do Estado de São Paulo</p>
-              <p className="text-white/80 mb-2">Número de registro: 12345678900</p>
+              <p className="text-white/80 mb-2">Registrada sob o número HRB 269671 no registro comercial de Berlin-Chalottenburg</p>
+              <p className="text-white/80 mb-2">VAT ID: DE451875565</p>
             </section>
           </div>
 
