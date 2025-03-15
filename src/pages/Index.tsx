@@ -47,7 +47,7 @@ const Index = () => {
                   asChild
                   size="lg" 
                   variant="outline" 
-                  className="border-white/20 hover:bg-white/5"
+                  className="border-white/20 hover:bg-white/20 hover:border-white/30 text-white hover:text-white"
                 >
                   <a href="https://blog.dosedetelemetria.com" target="_blank" rel="noopener noreferrer">
                     Explorar conteúdos
@@ -87,7 +87,7 @@ const Index = () => {
                 <Button 
                   asChild
                   variant="outline" 
-                  className="w-full border-telemetria-yellow/30 text-telemetria-yellow hover:bg-telemetria-yellow/10"
+                  className="w-full border-telemetria-yellow/30 text-telemetria-yellow hover:bg-telemetria-yellow hover:text-telemetria-dark hover:border-telemetria-yellow"
                 >
                   <Link to="/produtos#especializacao">
                     Saiba mais <ArrowRight className="ml-2 h-4 w-4" />
