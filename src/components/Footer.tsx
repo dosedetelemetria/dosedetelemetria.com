@@ -82,12 +82,12 @@ const Footer = () => {
             <h3 className="font-semibold text-white mb-4">Produtos</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/produtos#especializacao" className="text-white/70 hover:text-telemetria-yellow transition-colors text-sm">
+                <Link to="/produtos/especializacao-otel" className="text-white/70 hover:text-telemetria-yellow transition-colors text-sm">
                   Especialização em OTel
                 </Link>
               </li>
               <li>
-                <Link to="/produtos#trilha" className="text-white/70 hover:text-telemetria-yellow transition-colors text-sm">
+                <Link to="/produtos/trilha-otel" className="text-white/70 hover:text-telemetria-yellow transition-colors text-sm">
                   Trilha OTel
                 </Link>
               </li>

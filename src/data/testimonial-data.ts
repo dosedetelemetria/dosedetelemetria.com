@@ -16,40 +16,35 @@ export const testimonialData: Testimonial[] = [
     author: "Willian Saavedra",
     role: "Site Reliability Engineer",
     company: "Itaú",
-    avatarUrl: "/lovable-uploads/8dcc3a55-2161-4b2a-8169-aeee241858bd.png",
+    avatarUrl: "/testimonials/willian.webp",
     productIds: ["trilha", "especializacao"]
   },
   {
     id: "t2",
-    quote: "Depois de fazer a Especialização em OTel, consegui reduzir o tempo de resolução de problemas em 70%. O investimento compensou em todos os sentidos.",
-    author: "Mariana Santos",
-    role: "DevOps Engineer",
-    company: "CloudSolutions",
+    quote: "Muito instrutivo, bem alinhado com minhas perspectivas de futuro, tanto na parte técnica quanto gerencial. O futuro da observabilidade amadureceu em um padrão, e este padrão é o OpenTelemetry.",
+    author: "Cláudio Bastos",
+    role: "CTO",
+    company: "Mensis Tecnologia",
+    avatarUrl: "/testimonials/claudio.webp",
     productIds: ["especializacao"]
   },
   {
     id: "t3",
-    quote: "A clareza das explicações e a qualidade dos projetos práticos fazem deste curso o melhor investimento que fiz na minha carreira este ano.",
-    author: "Rafael Oliveira",
-    role: "Arquiteto de Software",
-    company: "FinTech SA",
+    quote: "Eu pude aprofundar e tirar dúvidas, superou minhas expectativas, tive vários insights a partir do que o Juraci trouxe.",
+    author: "Mateus Santos",
+    role: "CTO",
+    company: "Vericode",
+    avatarUrl: "/testimonials/mateus.webp",
     productIds: ["trilha", "especializacao"]
   },
   {
     id: "t4",
-    quote: "Nunca imaginei que implementar OpenTelemetry poderia ser tão acessível. Os instrutores tornam conceitos complexos fáceis de entender.",
-    author: "Amanda Costa",
-    role: "Backend Developer",
-    company: "E-commerce Brasil",
+    quote: "Eu já tinha experiência com OpenTelemetry, mais específico no Collector, mas foi interessante pra poder aprofundar os conhecimentos na parte de instrumentação. Estou saindo com um conhecimento muito maior do que esperava.",
+    author: "Rafael Gumiero",
+    role: "Principal Engineer",
+    company: "PicPay",
+    avatarUrl: "/testimonials/rafael.webp",
     productIds: ["trilha"]
-  },
-  {
-    id: "t5",
-    quote: "As mentorias ao vivo da especialização fizeram toda a diferença para solucionar problemas específicos do meu ambiente de trabalho.",
-    author: "Lucas Mendes",
-    role: "SRE",
-    company: "BankTech",
-    productIds: ["especializacao"]
   }
 ];
 
