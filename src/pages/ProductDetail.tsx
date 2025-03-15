@@ -1,3 +1,4 @@
+
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -77,8 +78,8 @@ const ProductDetail = () => {
                 ) : (
                   <Button 
                     size="lg" 
-                    className="bg-secondary/40 text-muted-foreground cursor-not-allowed"
-                    disabled
+                    className="bg-white/20 text-white hover:bg-telemetria-yellow/90 hover:text-telemetria-dark font-medium"
+                    disabled={false}
                   >
                     {product.ctaText}
                   </Button>
@@ -203,8 +204,14 @@ const ProductDetail = () => {
               <div className="space-y-4">
                 <Button 
                   size="lg" 
-                  className="bg-secondary/40 text-muted-foreground cursor-not-allowed"
-                  disabled
+                  className="bg-white/20 text-white hover:bg-telemetria-yellow/90 hover:text-telemetria-dark font-medium"
+                  disabled={false}
+                  onClick={() => {
+                    const waitlistSection = document.querySelector('.section-padding.bg-telemetria-darker');
+                    if (waitlistSection) {
+                      waitlistSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}
                 >
                   {product.ctaText}
                 </Button>
