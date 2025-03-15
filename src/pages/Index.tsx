@@ -3,14 +3,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight, Youtube, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import SectionHeading from "@/components/SectionHeading";
-import BlogCard from "@/components/BlogCard";
 import VideoEmbed from "@/components/VideoEmbed";
-import { blogPosts } from "@/data/blog-posts";
 
 const Index = () => {
-  // Obtem os dois posts mais recentes
-  const latestPosts = blogPosts.slice(0, 2);
-
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
@@ -54,9 +49,9 @@ const Index = () => {
                   variant="outline" 
                   className="border-white/20 hover:bg-white/5"
                 >
-                  <Link to="/blog">
+                  <a href="https://blog.dosedetelemetria.com" target="_blank" rel="noopener noreferrer">
                     Explorar conteúdos
-                  </Link>
+                  </a>
                 </Button>
               </div>
             </div>
@@ -158,38 +153,6 @@ const Index = () => {
                 title="" 
               />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Blog posts */}
-      <section className="section-padding bg-background">
-        <div className="container-custom">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-12">
-            <SectionHeading
-              title="Últimas do Blog"
-              subtitle="Artigos, tutoriais e novidades sobre OpenTelemetry"
-              className="mb-0"
-            />
-            <Link 
-              to="/blog" 
-              className="inline-flex items-center text-sm font-medium text-telemetria-yellow hover:underline mt-4 md:mt-0"
-            >
-              Ver todos os artigos <ArrowRight className="ml-1 h-4 w-4" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {latestPosts.map((post) => (
-              <BlogCard
-                key={post.slug}
-                slug={post.slug}
-                title={post.title}
-                excerpt={post.excerpt}
-                date={post.date}
-                image={post.image}
-              />
-            ))}
           </div>
         </div>
       </section>
