@@ -1,3 +1,4 @@
+
 import { ArrowDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -107,30 +108,30 @@ const Products = () => {
               <thead>
                 <tr>
                   <th className="py-4 px-6 text-left"></th>
-                  <th className="py-4 px-6 text-center text-lg font-semibold">Trilha OTel</th>
                   <th className="py-4 px-6 text-center text-lg font-semibold">Especialização em OTel</th>
+                  <th className="py-4 px-6 text-center text-lg font-semibold">Trilha OTel</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-white/10">
                 <tr className="bg-telemetria-dark/50">
                   <td className="py-4 px-6 text-white">Formato</td>
-                  <td className="py-4 px-6 text-center text-white/80">Auto-estudo</td>
                   <td className="py-4 px-6 text-center text-white/80">Turma com datas definidas</td>
+                  <td className="py-4 px-6 text-center text-white/80">Auto-estudo</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-6 text-white">Duração</td>
-                  <td className="py-4 px-6 text-center text-white/80">Seu ritmo</td>
                   <td className="py-4 px-6 text-center text-white/80">8 semanas</td>
+                  <td className="py-4 px-6 text-center text-white/80">Seu ritmo</td>
                 </tr>
                 <tr className="bg-telemetria-dark/50">
                   <td className="py-4 px-6 text-white">Mentorias</td>
-                  <td className="py-4 px-6 text-center text-white/80">Não</td>
                   <td className="py-4 px-6 text-center text-white/80">Sim, semanais</td>
+                  <td className="py-4 px-6 text-center text-white/80">Não</td>
                 </tr>
                 <tr>
                   <td className="py-4 px-6 text-white">Projetos práticos</td>
-                  <td className="py-4 px-6 text-center text-white/80">Sim, guiados</td>
                   <td className="py-4 px-6 text-center text-white/80">Sim, com feedback</td>
+                  <td className="py-4 px-6 text-center text-white/80">Sim, guiados</td>
                 </tr>
                 <tr className="bg-telemetria-dark/50">
                   <td className="py-4 px-6 text-white">Certificado</td>
@@ -139,19 +140,19 @@ const Products = () => {
                 </tr>
                 <tr>
                   <td className="py-4 px-6 text-white">Preço</td>
-                  <td className="py-4 px-6 text-center font-semibold text-white">€397</td>
                   <td className="py-4 px-6 text-center font-semibold text-white">€997</td>
+                  <td className="py-4 px-6 text-center font-semibold text-white">€397</td>
                 </tr>
                 <tr className="bg-telemetria-dark/50">
                   <td className="py-4 px-6 text-white">Disponibilidade</td>
                   <td className="py-4 px-6 text-center">
-                    <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
-                      Disponível
+                    <span className="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">
+                      Em breve
                     </span>
                   </td>
                   <td className="py-4 px-6 text-center">
-                    <span className="inline-block px-3 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full">
-                      Em breve
+                    <span className="inline-block px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">
+                      Disponível
                     </span>
                   </td>
                 </tr>
