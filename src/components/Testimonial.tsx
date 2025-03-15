@@ -27,14 +27,14 @@ const Testimonial = ({
 
   return (
     <div className={cn(
-      "flex flex-col space-y-4 rounded-lg border bg-card p-6 shadow",
+      "flex flex-col h-full rounded-lg border bg-card p-6 shadow",
       className
     )}>
-      <div className="text-lg italic text-muted-foreground">
+      <div className="text-lg italic text-muted-foreground flex-grow mb-6">
         "{quote}"
       </div>
       
-      <div className="flex items-center space-x-4">
+      <div className="flex items-center space-x-4 mt-auto">
         <Avatar className="h-12 w-12 border-2 border-telemetria-yellow/30">
           {avatarUrl && <AvatarImage src={avatarUrl} alt={author} />}
           <AvatarFallback className="bg-telemetria-yellow/20 text-telemetria-yellow">
