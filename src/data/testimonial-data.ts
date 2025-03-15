@@ -1,4 +1,3 @@
-
 export interface Testimonial {
   id: string;
   quote: string;
@@ -12,10 +11,10 @@ export interface Testimonial {
 export const testimonialData: Testimonial[] = [
   {
     id: "t1",
-    quote: "O curso Trilha OTel me permitiu implementar observabilidade na minha aplicação em menos de uma semana. O conteúdo é extremamente prático e bem estruturado.",
-    author: "Carlos Silva",
-    role: "Engenheiro de Software",
-    company: "TechBrasil",
+    quote: "Sou SRE a 6 anos, a imersão foi fenomenal. O Juraci é uma das mentes por trás do OpenTelemetry, é muito detalhado, ele vai destrinchando ponto a ponto. Sendo um dos criadores, ele consegue aprofundar bem. Expectativas superadas com sucesso!",
+    author: "Willian Saavedra",
+    role: "Site Reliability Engineer",
+    company: "Itaú",
     productIds: ["trilha", "especializacao"]
   },
   {
