@@ -66,9 +66,14 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/blog" className="text-white/70 hover:text-telemetria-yellow transition-colors text-sm">
+                <a 
+                  href="https://blog.dosedetelemetria.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="text-white/70 hover:text-telemetria-yellow transition-colors text-sm flex items-center"
+                >
                   Blog
-                </Link>
+                </a>
               </li>
             </ul>
           </div>
