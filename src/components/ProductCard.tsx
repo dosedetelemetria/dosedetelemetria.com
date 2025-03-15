@@ -76,7 +76,9 @@ const ProductCard = ({
               popular
                 ? "bg-telemetria-yellow text-telemetria-dark hover:bg-telemetria-yellow/90"
                 : available
-                ? "bg-secondary hover:bg-telemetria-yellow hover:text-telemetria-dark"
+                ? ctaText === "Lista de espera" 
+                  ? "bg-white/20 text-white hover:bg-telemetria-yellow hover:text-telemetria-dark"
+                  : "bg-secondary hover:bg-telemetria-yellow hover:text-telemetria-dark"
                 : "bg-secondary/40 text-muted-foreground cursor-not-allowed"
             )}
             disabled={!available}
