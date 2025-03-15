@@ -9,6 +9,7 @@ import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
+import Imprint from "./pages/Imprint";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
             <Route index element={<Index />} />
             <Route path="produtos" element={<Products />} />
             <Route path="produtos/:slug" element={<ProductDetail />} />
+            <Route path="imprint" element={<Imprint />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

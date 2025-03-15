@@ -107,6 +107,9 @@ const Footer = () => {
               <Link to="/termos-de-uso" className="text-sm text-white/70 hover:text-telemetria-yellow transition-colors">
                 Termos de Uso
               </Link>
+              <Link to="/imprint" className="text-sm text-white/70 hover:text-telemetria-yellow transition-colors">
+                Imprint
+              </Link>
             </div>
           </div>
         </div>
