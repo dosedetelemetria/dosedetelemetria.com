@@ -1,6 +1,6 @@
 
 import { Link } from "react-router-dom";
-import { Youtube, Linkedin, Mail } from "lucide-react";
+import { Youtube, Linkedin, Mail, Globe } from "lucide-react";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer className="bg-telemetria-darker border-t border-white/5 pt-16 pb-8">
       <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-4">
               <img 
@@ -93,6 +93,16 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+
+          <div>
+            <h3 className="font-semibold text-white mb-4">Idiomas</h3>
+            <ul className="space-y-2">
+              <li className="flex items-center gap-2">
+                <Globe size={16} className="text-white/70" />
+                <span className="text-sm text-white/70">Português | English</span>
+              </li>
+            </ul>
+          </div>
         </div>
         
         <div className="border-t border-white/5 pt-8">
@@ -100,16 +110,34 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground">
               &copy; {currentYear} Dose de Telemetria. Todos os direitos reservados.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/politica-de-privacidade" className="text-sm text-white/70 hover:text-telemetria-yellow transition-colors">
-                Política de Privacidade
-              </Link>
-              <Link to="/termos-de-uso" className="text-sm text-white/70 hover:text-telemetria-yellow transition-colors">
-                Termos de Uso
-              </Link>
-              <Link to="/imprint" className="text-sm text-white/70 hover:text-telemetria-yellow transition-colors">
-                Imprint
-              </Link>
+            <div className="flex flex-wrap gap-4 justify-center mt-4 md:mt-0">
+              <div className="flex space-x-3">
+                <Link to="/politica-de-privacidade" className="text-sm text-white/70 hover:text-telemetria-yellow transition-colors">
+                  Política de Privacidade
+                </Link>
+                <span className="text-white/30">|</span>
+                <Link to="/privacy-policy" className="text-sm text-white/70 hover:text-telemetria-yellow transition-colors">
+                  Privacy Policy
+                </Link>
+              </div>
+              <div className="flex space-x-3">
+                <Link to="/termos-de-uso" className="text-sm text-white/70 hover:text-telemetria-yellow transition-colors">
+                  Termos de Uso
+                </Link>
+                <span className="text-white/30">|</span>
+                <Link to="/terms-of-use" className="text-sm text-white/70 hover:text-telemetria-yellow transition-colors">
+                  Terms of Use
+                </Link>
+              </div>
+              <div className="flex space-x-3">
+                <Link to="/imprint" className="text-sm text-white/70 hover:text-telemetria-yellow transition-colors">
+                  Imprint
+                </Link>
+                <span className="text-white/30">|</span>
+                <Link to="/imprint-en" className="text-sm text-white/70 hover:text-telemetria-yellow transition-colors">
+                  Imprint (EN)
+                </Link>
+              </div>
             </div>
           </div>
         </div>
