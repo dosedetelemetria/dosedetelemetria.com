@@ -35,7 +35,7 @@ const Testimonial = ({
       </div>
       
       <div className="flex items-center space-x-4">
-        <Avatar>
+        <Avatar className="h-12 w-12 border-2 border-telemetria-yellow/30">
           {avatarUrl && <AvatarImage src={avatarUrl} alt={author} />}
           <AvatarFallback className="bg-telemetria-yellow/20 text-telemetria-yellow">
             {initials}

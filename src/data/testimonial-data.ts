@@ -1,3 +1,4 @@
+
 export interface Testimonial {
   id: string;
   quote: string;
@@ -15,6 +16,7 @@ export const testimonialData: Testimonial[] = [
     author: "Willian Saavedra",
     role: "Site Reliability Engineer",
     company: "Itaú",
+    avatarUrl: "/lovable-uploads/8dcc3a55-2161-4b2a-8169-aeee241858bd.png",
     productIds: ["trilha", "especializacao"]
   },
   {
