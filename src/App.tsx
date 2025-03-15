@@ -10,6 +10,8 @@ import ProductDetail from "./pages/ProductDetail";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
 import Imprint from "./pages/Imprint";
+import TermsOfUse from "./pages/TermsOfUse";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,8 @@ const App = () => (
             <Route path="produtos" element={<Products />} />
             <Route path="produtos/:slug" element={<ProductDetail />} />
             <Route path="imprint" element={<Imprint />} />
+            <Route path="termos-de-uso" element={<TermsOfUse />} />
+            <Route path="politica-de-privacidade" element={<PrivacyPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
