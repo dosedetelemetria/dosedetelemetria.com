@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -25,12 +25,12 @@ const Navbar = () => {
   const navLinks = [
     { name: "Início", path: "/" },
     { name: "Produtos", path: "/produtos" },
-    { name: "Blog", path: "/blog" },
+    { name: "Blog", path: "https://blog.dosedetelemetria.com", external: true },
   ];
 
   const isActive = (path: string) => {
     if (path === "/" && location.pathname === "/") return true;
-    if (path !== "/" && location.pathname.startsWith(path)) return true;
+    if (path !== "/" && !path.startsWith("http") && location.pathname.startsWith(path)) return true;
     return false;
   };
 
@@ -53,16 +53,29 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <Link
-                key={link.path}
-                to={link.path}
-                className={cn(
-                  "hover-link text-sm font-medium transition-colors hover:text-telemetria-yellow",
-                  isActive(link.path) ? "text-telemetria-yellow" : "text-white/90"
-                )}
-              >
-                {link.name}
-              </Link>
+              link.external ? (
+                <a
+                  key={link.path}
+                  href={link.path}
+                  className="hover-link text-sm font-medium transition-colors hover:text-telemetria-yellow text-white/90 flex items-center"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.name}
+                  <ExternalLink className="ml-1 h-3 w-3" />
+                </a>
+              ) : (
+                <Link
+                  key={link.path}
+                  to={link.path}
+                  className={cn(
+                    "hover-link text-sm font-medium transition-colors hover:text-telemetria-yellow",
+                    isActive(link.path) ? "text-telemetria-yellow" : "text-white/90"
+                  )}
+                >
+                  {link.name}
+                </Link>
+              )
             ))}
             <Button 
               asChild
@@ -94,17 +107,31 @@ const Navbar = () => {
       >
         <div className="flex flex-col h-full justify-center items-center gap-8 px-4 pt-16">
           {navLinks.map((link) => (
-            <Link
-              key={link.path}
-              to={link.path}
-              className={cn(
-                "text-xl font-medium transition-colors hover:text-telemetria-yellow",
-                isActive(link.path) ? "text-telemetria-yellow" : "text-white/90"
-              )}
-              onClick={closeMenu}
-            >
-              {link.name}
-            </Link>
+            link.external ? (
+              <a
+                key={link.path}
+                href={link.path}
+                className="text-xl font-medium transition-colors hover:text-telemetria-yellow text-white/90 flex items-center"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+              >
+                {link.name}
+                <ExternalLink className="ml-1 h-4 w-4" />
+              </a>
+            ) : (
+              <Link
+                key={link.path}
+                to={link.path}
+                className={cn(
+                  "text-xl font-medium transition-colors hover:text-telemetria-yellow",
+                  isActive(link.path) ? "text-telemetria-yellow" : "text-white/90"
+                )}
+                onClick={closeMenu}
+              >
+                {link.name}
+              </Link>
+            )
           ))}
           <Button 
             asChild

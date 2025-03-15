@@ -7,8 +7,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Products from "./pages/Products";
 import ProductDetail from "./pages/ProductDetail";
-import Blog from "./pages/Blog";
-import BlogPost from "./pages/BlogPost";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
 
@@ -25,8 +23,6 @@ const App = () => (
             <Route index element={<Index />} />
             <Route path="produtos" element={<Products />} />
             <Route path="produtos/:slug" element={<ProductDetail />} />
-            <Route path="blog" element={<Blog />} />
-            <Route path="blog/:slug" element={<BlogPost />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>
