@@ -34,11 +34,11 @@ export const productData: Product[] = [
     id: "especializacao",
     slug: "especializacao-otel",
     title: "Especialização em OTel",
-    description: "Formação intensiva com mentorias ao vivo e projetos práticos",
-    fullDescription: "Nossa especialização em OpenTelemetry é um programa imersivo de 8 semanas com mentorias ao vivo, projetos práticos e feedback personalizado dos melhores especialistas do mercado.",
+    description: "Formação intensiva com conversas semanais e projetos práticos",
+    fullDescription: "Nossa especialização em OpenTelemetry é um programa imersivo de 8 semanas com conversas semanais, projetos práticos e feedback personalizado dos melhores especialistas do mercado.",
     features: [
       { text: "Turmas com vagas limitadas" },
-      { text: "Mentorias ao vivo com especialistas" },
+      { text: "Conversas semanais com especialistas" },
       { text: "Projetos práticos e feedback personalizado" },
       { text: "Certificado de conclusão" },
       { text: "Acesso ao grupo privado de alunos" },
@@ -46,7 +46,7 @@ export const productData: Product[] = [
     ],
     detailedFeatures: [
       {
-        title: "Mentorias ao vivo",
+        title: "Conversas semanais",
         description: "Sessões semanais com especialistas onde você pode tirar dúvidas e receber orientação personalizada."
       },
       {
@@ -72,39 +72,143 @@ export const productData: Product[] = [
     ],
     curriculum: [
       {
-        title: "Fundamentos de Observabilidade",
+        title: "O Básico em 3 Aulas",
         lessons: [
-          "Introdução aos conceitos de observabilidade",
-          "Os três pilares: logs, métricas e traces",
-          "Evolução da observabilidade e o papel do OpenTelemetry",
-          "Arquitetura distribuída e desafios de observabilidade"
+          "Instrumentando uma abplicação",
+          "Visualizando a telemetria",
+          "Colocando um Collector no meio"
         ]
       },
       {
-        title: "Introdução ao OpenTelemetry",
+        title: "Fundamentos",
         lessons: [
-          "História e evolução do OpenTelemetry",
-          "Arquitetura e componentes principais",
-          "Comparação com outras soluções de observabilidade",
-          "Configuração do ambiente de desenvolvimento"
+          "Problemas que resolvemos",
+          "Audiências",
+          "Filosofia do projeto",
+          "Instrumentação",
+          "Telemetria",
+          "Observabilidade",
+          "Monitoramento",
+          "OpenTelemetry",
+          "Bônus: Observabilidade 2.0"
         ]
       },
       {
-        title: "Instrumentação com OpenTelemetry",
+        title: "Sinais da observabilidade",
         lessons: [
-          "Instrumentação automática vs manual",
-          "Implementação de traces em aplicações",
-          "Coleta e exportação de métricas",
-          "Integração com diferentes linguagens de programação"
+          "Logs",
+          "Métricas",
+          "Rastros",
+          "Perfis",
+          "Eventos"
         ]
       },
       {
-        title: "OpenTelemetry em Produção",
+        title: "OTel na prática",
         lessons: [
-          "Deployment em ambientes Kubernetes",
-          "Configuração de coletores",
-          "Estratégias de sampling",
-          "Performance tuning e otimização"
+          "O que vamos observar?",
+          "Quais as nossas dores?",
+          "Adicionando o OTel SDK",
+          "Instrumentando nossa inicialização",
+          "Observando chamadas HTTP",
+          "Novos trechos, ou eventos?",
+          "Entendendo a latência normal entre serviços",
+          "Propagando contexto manualmente"
+        ]
+      },
+      {
+        title: "Modelo de dados",
+        lessons: [
+          "Introdução",
+          "Atributos",
+          "Escopo",
+          "Recursos",
+          "Contexto",
+          "Bagagem",
+          "Rastros",
+          "Métricas",
+          "Logs",
+          "Perfis",
+          "Bônus: Entidades"
+        ]
+      },
+      {
+        title: "OpenTelemetry API",
+        lessons: [
+          "Audiência",
+          "Rastreamento",
+          "Métricas"
+        ]
+      },
+      {
+        title: "OpenTelemetry SDK",
+        lessons: [
+          "O básico pra sobreviver",
+          "SDKs em detalhes",
+          "Usando um arquivo de configuração"
+        ]
+      },
+      {
+        title: "OpenTelemetry Collector",
+        lessons: [
+          "Introdução",
+          "Tipos de componentes",
+          "Obtendo o Collector",
+          "Configuração",
+          "Agentes vs. Gateways vs. Coletores",
+          "Escalando o Collector",
+          "Monitorando Collectors",
+          "OTTL",
+          "Técnicas de resiliência",
+          "Segurança",
+          "Construindo seu Collector"
+        ]
+      },
+      {
+        title: "Extendendo o Collector",
+        lessons: [
+          "Introdução",
+          "Receivers",
+          "Processors",
+          "Exporters",
+          "Extensions",
+          "Connectors"
+        ]
+      },
+      {
+        title: "OpenTelemetry Operator",
+        lessons: [
+          "Em breve",
+        ]
+      },
+      {
+        title: "OpAMP",
+        lessons: [
+          "Em breve",
+        ]
+      },
+      {
+        title: "Arquitetura",
+        lessons: [
+          "Em breve",
+        ]
+      },
+      {
+        title: "Interoperabilidade",
+        lessons: [
+          "Em breve",
+        ]
+      },
+      {
+        title: "Migração",
+        lessons: [
+          "Em breve",
+        ]
+      },
+      {
+        title: "Cultura de observabilidade",
+        lessons: [
+          "Em breve",
         ]
       }
     ],
@@ -118,35 +222,33 @@ export const productData: Product[] = [
     slug: "trilha-otel",
     title: "Trilha OTel",
     description: "Curso completo para aprender no seu ritmo",
-    fullDescription: "A Trilha OTel é um curso completo e autoguiado que permite você dominar OpenTelemetry no seu próprio ritmo, com conteúdo prático e projetos que simulam cenários reais.",
+    fullDescription: "A Trilha OTel é um curso completo e autoguiado que permite você dominar OpenTelemetry no seu próprio ritmo.",
     features: [
-      { text: "Acesso vitalício às aulas" },
+      { text: "Acesso por um ano às aulas" },
       { text: "Certificado de conclusão" },
-      { text: "Projetos práticos guiados" },
-      { text: "Suporte via comunidade" },
-      { text: "Atualizações do conteúdo" },
-      { text: "30 dias de garantia" }
+      { text: "Conteúdo aprofundado" },
+      { text: "Atualizações do conteúdo" }
     ],
     detailedFeatures: [
       {
         title: "Aprenda no seu ritmo",
-        description: "Estude quando e onde quiser, com acesso vitalício a todo o conteúdo do curso."
+        description: "Estude quando e onde quiser, com acesso por um ano a todo o conteúdo do curso."
       },
       {
-        title: "Conteúdo prático",
-        description: "Mais de 40 aulas com exemplos práticos e código que você pode aplicar imediatamente."
+        title: "Conteúdo aprofundado",
+        description: "Mais de 50 aulas cobrindo tudo sobre OpenTelemetry."
       },
       {
-        title: "Projetos reais",
-        description: "Desenvolva projetos que simulam ambientes reais de produção com diferentes tecnologias."
-      },
-      {
-        title: "Comunidade de suporte",
-        description: "Acesso a uma comunidade ativa onde você pode tirar dúvidas e compartilhar experiências."
+        title: "Forte base teórica",
+        description: "Entenda o 'porquê', além do 'como'."
       },
       {
         title: "Certificado digital",
         description: "Ao completar o curso, você recebe um certificado que pode adicionar ao seu currículo e LinkedIn."
+      },
+      {
+        title: "Além dos aspectos técnicos",
+        description: "Saiba sobre arquitetura, migração, cultura de observabilidade."
       },
       {
         title: "Atualizações constantes",
@@ -155,39 +257,143 @@ export const productData: Product[] = [
     ],
     curriculum: [
       {
-        title: "Fundamentos de Observabilidade",
+        title: "O Básico em 3 Aulas",
         lessons: [
-          "Introdução aos conceitos de observabilidade",
-          "Os três pilares: logs, métricas e traces",
-          "Evolução da observabilidade e o papel do OpenTelemetry",
-          "Arquitetura distribuída e desafios de observabilidade"
+          "Instrumentando uma abplicação",
+          "Visualizando a telemetria",
+          "Colocando um Collector no meio"
         ]
       },
       {
-        title: "Introdução ao OpenTelemetry",
+        title: "Fundamentos",
         lessons: [
-          "História e evolução do OpenTelemetry",
-          "Arquitetura e componentes principais",
-          "Comparação com outras soluções de observabilidade",
-          "Configuração do ambiente de desenvolvimento"
+          "Problemas que resolvemos",
+          "Audiências",
+          "Filosofia do projeto",
+          "Instrumentação",
+          "Telemetria",
+          "Observabilidade",
+          "Monitoramento",
+          "OpenTelemetry",
+          "Bônus: Observabilidade 2.0"
         ]
       },
       {
-        title: "Instrumentação com OpenTelemetry",
+        title: "Sinais da observabilidade",
         lessons: [
-          "Instrumentação automática vs manual",
-          "Implementação de traces em aplicações",
-          "Coleta e exportação de métricas",
-          "Integração com diferentes linguagens de programação"
+          "Logs",
+          "Métricas",
+          "Rastros",
+          "Perfis",
+          "Eventos"
         ]
       },
       {
-        title: "OpenTelemetry em Produção",
+        title: "OTel na prática",
         lessons: [
-          "Deployment em ambientes Kubernetes",
-          "Configuração de coletores",
-          "Estratégias de sampling",
-          "Performance tuning e otimização"
+          "O que vamos observar?",
+          "Quais as nossas dores?",
+          "Adicionando o OTel SDK",
+          "Instrumentando nossa inicialização",
+          "Observando chamadas HTTP",
+          "Novos trechos, ou eventos?",
+          "Entendendo a latência normal entre serviços",
+          "Propagando contexto manualmente"
+        ]
+      },
+      {
+        title: "Modelo de dados",
+        lessons: [
+          "Introdução",
+          "Atributos",
+          "Escopo",
+          "Recursos",
+          "Contexto",
+          "Bagagem",
+          "Rastros",
+          "Métricas",
+          "Logs",
+          "Perfis",
+          "Bônus: Entidades"
+        ]
+      },
+      {
+        title: "OpenTelemetry API",
+        lessons: [
+          "Audiência",
+          "Rastreamento",
+          "Métricas"
+        ]
+      },
+      {
+        title: "OpenTelemetry SDK",
+        lessons: [
+          "O básico pra sobreviver",
+          "SDKs em detalhes",
+          "Usando um arquivo de configuração"
+        ]
+      },
+      {
+        title: "OpenTelemetry Collector",
+        lessons: [
+          "Introdução",
+          "Tipos de componentes",
+          "Obtendo o Collector",
+          "Configuração",
+          "Agentes vs. Gateways vs. Coletores",
+          "Escalando o Collector",
+          "Monitorando Collectors",
+          "OTTL",
+          "Técnicas de resiliência",
+          "Segurança",
+          "Construindo seu Collector"
+        ]
+      },
+      {
+        title: "Extendendo o Collector",
+        lessons: [
+          "Introdução",
+          "Receivers",
+          "Processors",
+          "Exporters",
+          "Extensions",
+          "Connectors"
+        ]
+      },
+      {
+        title: "OpenTelemetry Operator",
+        lessons: [
+          "Em breve",
+        ]
+      },
+      {
+        title: "OpAMP",
+        lessons: [
+          "Em breve",
+        ]
+      },
+      {
+        title: "Arquitetura",
+        lessons: [
+          "Em breve",
+        ]
+      },
+      {
+        title: "Interoperabilidade",
+        lessons: [
+          "Em breve",
+        ]
+      },
+      {
+        title: "Migração",
+        lessons: [
+          "Em breve",
+        ]
+      },
+      {
+        title: "Cultura de observabilidade",
+        lessons: [
+          "Em breve",
         ]
       }
     ],
