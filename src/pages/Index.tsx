@@ -22,7 +22,7 @@ const Index = () => {
             <div className="animate-fade-in">
               <div className="inline-block mb-4">
                 <img 
-                  src="/lovable-uploads/680a09b6-29f2-4dee-8b6a-c9b075517152.png" 
+                  src="/logo.png" 
                   alt="Dose de Telemetria Logo" 
                   className="h-24 w-24 animate-pulse-subtle"
                 />
@@ -40,7 +40,7 @@ const Index = () => {
                   className="bg-telemetria-yellow text-telemetria-dark hover:bg-telemetria-yellow/90"
                 >
                   <Link to="/produtos">
-                    Conheça nossos cursos
+                    Conheça nossos produtos
                   </Link>
                 </Button>
                 <Button 
@@ -50,7 +50,7 @@ const Index = () => {
                   className="border-white/20 hover:bg-white/20 hover:border-white/30 text-white hover:text-white"
                 >
                   <a href="https://blog.dosedetelemetria.com" target="_blank" rel="noopener noreferrer">
-                    Explorar conteúdos
+                    Veja nosso blog
                   </a>
                 </Button>
               </div>

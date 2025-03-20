@@ -74,7 +74,7 @@ export const productData: Product[] = [
       {
         title: "O Básico em 3 Aulas",
         lessons: [
-          "Instrumentando uma abplicação",
+          "Instrumentando uma aplicação",
           "Visualizando a telemetria",
           "Colocando um Collector no meio"
         ]
@@ -222,7 +222,7 @@ export const productData: Product[] = [
     slug: "trilha-otel",
     title: "Trilha OTel",
     description: "Curso completo para aprender no seu ritmo",
-    fullDescription: "A Trilha OTel é um curso completo e autoguiado que permite você dominar OpenTelemetry no seu próprio ritmo.",
+    fullDescription: "A Trilha OTel é um curso completo e autoguiado que permite você dominar OpenTelemetry no seu próprio ritmo. Os últimos módulos serão finalizados até o fim de abril.",
     features: [
       { text: "Acesso por um ano às aulas" },
       { text: "Certificado de conclusão" },
@@ -259,7 +259,7 @@ export const productData: Product[] = [
       {
         title: "O Básico em 3 Aulas",
         lessons: [
-          "Instrumentando uma abplicação",
+          "Instrumentando uma aplicação",
           "Visualizando a telemetria",
           "Colocando um Collector no meio"
         ]

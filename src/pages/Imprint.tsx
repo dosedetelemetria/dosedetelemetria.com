@@ -45,10 +45,6 @@ const Imprint = () => {
               <p className="text-white/80 mb-2">VAT ID: DE451875565</p>
             </section>
           </div>
-
-          <div className="mt-10 text-sm text-white/60">
-            <p>Última atualização: {new Date().toLocaleDateString('pt-BR')}</p>
-          </div>
         </div>
       </div>
     </div>

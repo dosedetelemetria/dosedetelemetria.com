@@ -43,7 +43,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2 z-50" onClick={closeMenu}>
             <img 
-              src="/lovable-uploads/680a09b6-29f2-4dee-8b6a-c9b075517152.png" 
+              src="/logo.png" 
               alt="Dose de Telemetria" 
               className="h-10 w-10"
             />
@@ -81,7 +81,7 @@ const Navbar = () => {
               asChild
               className="bg-telemetria-yellow text-telemetria-dark hover:bg-telemetria-yellow/90 font-medium"
             >
-              <a href="https://www.youtube.com/channel/" target="_blank" rel="noopener noreferrer">
+              <a href="https://www.youtube.com/@DoseDeTelemetria" target="_blank" rel="noopener noreferrer">
                 Inscreva-se
               </a>
             </Button>

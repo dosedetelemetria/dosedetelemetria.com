@@ -46,7 +46,7 @@ const ProductCard = ({
     >
       {popular && (
         <div className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-telemetria-yellow px-3 py-1 text-xs font-semibold text-telemetria-dark">
-          Popular
+          Disponível
         </div>
       )}
 

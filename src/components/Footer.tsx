@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-4">
               <img 
-                src="/lovable-uploads/680a09b6-29f2-4dee-8b6a-c9b075517152.png" 
+                src="/logo.png" 
                 alt="Dose de Telemetria" 
                 className="h-10 w-10"
               />
@@ -25,7 +25,7 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4 pt-2">
               <a 
-                href="https://youtube.com/" 
+                href="https://www.youtube.com/@DoseDeTelemetria" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white/70 hover:text-telemetria-yellow transition-colors"
@@ -34,7 +34,7 @@ const Footer = () => {
                 <Youtube size={20} />
               </a>
               <a 
-                href="https://linkedin.com/" 
+                href="https://www.linkedin.com/company/dosetelemetria/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-white/70 hover:text-telemetria-yellow transition-colors"
@@ -98,7 +98,7 @@ const Footer = () => {
         <div className="border-t border-white/5 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-sm text-muted-foreground">
-              &copy; {currentYear} Dose de Telemetria. Todos os direitos reservados.
+              &copy; {currentYear} Dose de Telemetria GmbH. Todos os direitos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/politica-de-privacidade" className="text-sm text-white/70 hover:text-telemetria-yellow transition-colors">

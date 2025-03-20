@@ -30,7 +30,7 @@ const Products = () => {
                 Nossos <span className="text-telemetria-yellow">Produtos</span>
               </h1>
               <p className="text-xl text-white/80 mb-8 max-w-2xl mx-auto">
-                Cursos e especializações de alta qualidade em OpenTelemetry para impulsionar sua carreira em observabilidade
+                Cursos e especializações de alta qualidade em OpenTelemetry (OTel) para impulsionar sua carreira em observabilidade
               </p>
               <div className="mt-8 flex justify-center">
                 <a href="#produtos" className="text-white/70 hover:text-telemetria-yellow transition-colors animate-bounce">

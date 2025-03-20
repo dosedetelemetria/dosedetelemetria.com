@@ -125,7 +125,7 @@ const ProductDetail = () => {
         <div className="container-custom">
           <SectionHeading
             title="O que dizem nossos alunos"
-            subtitle="Experiências reais de quem já participou deste curso"
+            subtitle="Experiências reais de quem já aprendeu com a gente"
             centered
           />
 

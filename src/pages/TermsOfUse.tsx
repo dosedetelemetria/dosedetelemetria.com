@@ -11,10 +11,6 @@ const TermsOfUse = () => {
         <Separator className="bg-telemetria-yellow/30 mb-8" />
 
         <div className="bg-telemetria-darker border border-white/5 rounded-xl p-6 md:p-8 max-w-4xl">
-          <p className="text-white/80 mb-8">
-            Última atualização: {new Date().toLocaleDateString('pt-BR')}
-          </p>
-
           <div className="space-y-10">
             <section>
               <SectionHeading 
