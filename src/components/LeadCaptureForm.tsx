@@ -3,7 +3,10 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Mail, User, Check } from "lucide-react";
+import { Label } from "@/components/ui/label";
+import { Textarea } from "@/components/ui/textarea";
+import { Mail, User, Check, MessageSquare } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 interface LeadCaptureFormProps {
   productId: string;
@@ -15,22 +18,51 @@ const LeadCaptureForm = ({ productId, productName }: LeadCaptureFormProps) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError(null);
     
-    // Simulate API call
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // 1. Store in Supabase
+      const { error: dbError } = await supabase
+        .from("waitlist")
+        .insert({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message || null,
+          product_id: productId,
+          product_name: productName,
+        });
+
+      if (dbError) throw dbError;
+
+      // 2. Send email notification
+      const response = await supabase.functions.invoke('send-waitlist-notification', {
+        body: {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          productId,
+          productName,
+        },
+      });
+
+      if (response.error) throw new Error(response.error.message);
+
       setIsSubmitted(true);
       
       toast({
@@ -38,9 +70,17 @@ const LeadCaptureForm = ({ productId, productName }: LeadCaptureFormProps) => {
         description: "Obrigado pelo seu interesse. Entraremos em contato em breve.",
       });
       
-      // Could send data to a real API here
-      console.log("Lead captured:", { ...formData, productId });
-    }, 1000);
+    } catch (err: any) {
+      console.error("Error submitting form:", err);
+      setError(err.message || "Ocorreu um erro ao processar sua inscrição. Por favor tente novamente.");
+      toast({
+        title: "Erro ao processar inscrição",
+        description: "Ocorreu um erro ao processar sua inscrição. Por favor tente novamente.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
@@ -64,13 +104,23 @@ const LeadCaptureForm = ({ productId, productName }: LeadCaptureFormProps) => {
         Preencha seus dados abaixo para ser notificado quando abrirmos novas vagas para este curso.
       </p>
       
+      {error && (
+        <div className="bg-red-900/30 border border-red-500/50 text-white rounded-md p-3 mb-4">
+          {error}
+        </div>
+      )}
+      
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
+          <Label htmlFor="name" className="text-white/80 mb-1.5">
+            Nome completo
+          </Label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <User className="h-4 w-4 text-gray-400" />
             </div>
             <Input
+              id="name"
               name="name"
               value={formData.name}
               onChange={handleChange}
@@ -82,11 +132,15 @@ const LeadCaptureForm = ({ productId, productName }: LeadCaptureFormProps) => {
         </div>
         
         <div>
+          <Label htmlFor="email" className="text-white/80 mb-1.5">
+            Email
+          </Label>
           <div className="relative">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <Mail className="h-4 w-4 text-gray-400" />
             </div>
             <Input
+              id="email"
               type="email"
               name="email"
               value={formData.email}
@@ -94,6 +148,25 @@ const LeadCaptureForm = ({ productId, productName }: LeadCaptureFormProps) => {
               placeholder="Seu melhor email"
               required
               className="pl-10"
+            />
+          </div>
+        </div>
+        
+        <div>
+          <Label htmlFor="message" className="text-white/80 mb-1.5">
+            Mensagem (opcional)
+          </Label>
+          <div className="relative">
+            <div className="absolute top-3 left-3 pointer-events-none">
+              <MessageSquare className="h-4 w-4 text-gray-400" />
+            </div>
+            <Textarea
+              id="message"
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Conte-nos por que você está interessado neste curso"
+              className="pl-10 min-h-[100px]"
             />
           </div>
         </div>
